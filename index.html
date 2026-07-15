@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Thakur — Performance Marketing Manager</title>
+<meta name="description" content="Rohan Thakur — Performance Marketing Manager specializing in Google Ads and Meta Ads. Delivering measurable ROAS, CTR, and CPC growth for e-commerce and luxury brands across India.">
+<meta property="og:title" content="Rohan Thakur — Performance Marketing Manager">
+<meta property="og:description" content="Full-funnel Google Ads &amp; Meta Ads strategist. 900% peak ROAS via Google Ads in luxury product marketing.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%231d1d1f'/%3E%3Ctext x='50' y='67' font-family='Arial' font-size='48' font-weight='700' fill='white' text-anchor='middle'%3ERT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   TOKENS
+   ============================================ */
+:root{
+  --ink:#1d1d1f;
+  --ink-soft:#424245;
+  --paper:#fbfbfd;
+  --mist:#f5f5f7;
+  --mist-2:#e8e8ed;
+  --line:#d2d2d7;
+  --slate:#6e6e73;
+  --void:#000000;
+  --void-2:#111113;
+  --void-line:rgba(255,255,255,.14);
+  --white:#ffffff;
+  --signal:#0071e3;
+  --signal-deep:#0058b0;
+
+  --font-d:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --font-m:'JetBrains Mono','SF Mono',ui-monospace,Menlo,Consolas,monospace;
+
+  --container:1180px;
+  --r-lg:28px;
+  --r-md:20px;
+  --r-sm:12px;
+  --r-pill:980px;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  font-family:var(--font-d);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  font-size:17px;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+h1,h2,h3,h4{font-weight:700;letter-spacing:-0.02em;line-height:1.08;}
+svg{display:block;}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px;}
+:focus-visible{outline:2px solid var(--signal);outline-offset:4px;border-radius:4px;}
+.skip-link{
+  position:absolute;left:-999px;top:auto;background:var(--ink);color:var(--white);
+  padding:12px 20px;border-radius:var(--r-sm);z-index:3000;font-size:14px;font-weight:600;
+}
+.skip-link:focus{left:16px;top:16px;}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;}
+}
+
+/* ============================================
+   TYPE UTILITIES
+   ============================================ */
+.eyebrow{
+  font-family:var(--font-m);
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--signal);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:18px;
+}
+.eyebrow::before{
+  content:'';
+  width:7px;height:7px;border-radius:50%;
+  background:var(--signal);
+  flex-shrink:0;
+}
+.eyebrow.on-dark{color:#6cb2ff;}
+.eyebrow.on-dark::before{background:#6cb2ff;}
+
+.section-head{max-width:680px;margin-bottom:64px;}
+.section-head h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:18px;}
+.section-head p{font-size:18px;color:var(--slate);line-height:1.6;}
+.on-dark .section-head p{color:rgba(255,255,255,.62);}
+
+/* Reveal-on-scroll */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+.reveal.is-visible{opacity:1;transform:translateY(0);}
+.reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+.reveal-stagger.is-visible > *{opacity:1;transform:translateY(0);}
+.reveal-stagger.is-visible > *:nth-child(1){transition-delay:.05s;}
+.reveal-stagger.is-visible > *:nth-child(2){transition-delay:.12s;}
+.reveal-stagger.is-visible > *:nth-child(3){transition-delay:.19s;}
+.reveal-stagger.is-visible > *:nth-child(4){transition-delay:.26s;}
+.reveal-stagger.is-visible > *:nth-child(5){transition-delay:.33s;}
+.reveal-stagger.is-visible > *:nth-child(6){transition-delay:.40s;}
+.reveal-stagger.is-visible > *:nth-child(7){transition-delay:.47s;}
+.reveal-stagger.is-visible > *:nth-child(8){transition-delay:.54s;}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  font-size:15px;font-weight:600;
+  padding:14px 28px;border-radius:var(--r-pill);
+  transition:transform .35s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);
+  white-space:nowrap;
+}
+.btn-primary{background:var(--ink);color:var(--white);}
+.btn-primary:hover{background:var(--signal);transform:translateY(-2px);}
+.btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--line);}
+.btn-secondary:hover{border-color:var(--ink);transform:translateY(-2px);}
+.btn-on-dark.btn-secondary{color:var(--white);border-color:var(--void-line);}
+.btn-on-dark.btn-secondary:hover{border-color:rgba(255,255,255,.6);}
+.btn svg{width:16px;height:16px;}
+
+/* ============================================
+   NAV
+   ============================================ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:56px;
+  background:rgba(251,251,253,.72);
+  backdrop-filter:blur(20px) saturate(180%);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid rgba(210,210,215,0);
+  transition:border-color .3s var(--ease);
+}
+.nav.scrolled{border-bottom-color:var(--line);}
+.nav-inner{
+  height:56px;
+  max-width:var(--container);margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;letter-spacing:-0.01em;}
+.nav-logo .mark{
+  width:24px;height:24px;border-radius:7px;background:var(--ink);color:var(--white);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-m);font-size:10px;font-weight:600;
+}
+.nav-links{display:flex;align-items:center;gap:2.1rem;}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-soft);transition:color .2s;}
+.nav-links a:hover{color:var(--ink);}
+.nav-links .nav-cta{
+  font-weight:600;color:var(--white);background:var(--ink);
+  padding:8px 18px;border-radius:var(--r-pill);transition:background .2s,transform .2s;
+}
+.nav-links .nav-cta:hover{background:var(--signal);transform:translateY(-1px);}
+.nav-toggle{
+  display:none;width:34px;height:34px;border-radius:8px;
+  align-items:center;justify-content:center;flex-shrink:0;
+}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{
+  content:'';display:block;width:18px;height:1.6px;background:var(--ink);
+  transition:transform .3s var(--ease),opacity .3s var(--ease);position:relative;
+}
+.nav-toggle span::before{position:absolute;top:-6px;width:18px;}
+.nav-toggle span::after{position:absolute;top:6px;width:18px;}
+.nav-toggle[aria-expanded="true"] span{background:transparent;}
+.nav-toggle[aria-expanded="true"] span::before{transform:translateY(6px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] span::after{transform:translateY(-6px) rotate(-45deg);}
+
+.nav-mobile{
+  position:fixed;top:56px;left:0;right:0;z-index:999;
+  background:rgba(251,251,253,.98);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+  max-height:0;overflow:hidden;
+  transition:max-height .4s var(--ease);
+}
+.nav-mobile.is-open{max-height:400px;}
+.nav-mobile-inner{padding:8px 24px 20px;display:flex;flex-direction:column;}
+.nav-mobile a{padding:14px 0;font-size:17px;font-weight:500;border-bottom:1px solid var(--mist-2);}
+.nav-mobile a:last-child{border-bottom:none;}
+
+@media (max-width:860px){
+  .nav-links{display:none;}
+  .nav-toggle{display:flex;}
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  position:relative;
+  padding:168px 0 100px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse 900px 500px at 82% -10%, rgba(0,113,227,.10), transparent 60%),
+    var(--paper);
+}
+.hero-inner{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;
+  max-width:var(--container);margin:0 auto;padding:0 24px;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;font-weight:600;color:var(--ink-soft);
+  background:var(--white);border:1px solid var(--line);
+  padding:7px 14px 7px 10px;border-radius:var(--r-pill);
+  margin-bottom:28px;
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:#20c060;flex-shrink:0;box-shadow:0 0 0 3px rgba(32,192,96,.18);}
+.hero h1{
+  font-size:clamp(2.6rem,5.6vw,4.4rem);
+  letter-spacing:-0.035em;
+  line-height:1.04;
+  margin-bottom:24px;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--signal),#00a3ff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{
+  font-size:19px;color:var(--slate);max-width:520px;margin-bottom:38px;line-height:1.6;
+}
+.hero-sub strong{color:var(--ink);font-weight:600;}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+
+.hero-visual{position:relative;height:420px;}
+.hero-card{
+  position:absolute;inset:0;
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:32px 30px;
+  box-shadow:0 40px 80px -40px rgba(0,0,0,.25);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.hero-card-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.hero-card-label{font-family:var(--font-m);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);}
+.hero-card-tag{
+  font-family:var(--font-m);font-size:11px;font-weight:600;color:#0d8a4f;
+  background:#e6f6ee;padding:4px 10px;border-radius:var(--r-pill);
+}
+.hero-graph{width:100%;height:180px;margin:8px 0;}
+.hero-graph path.line{
+  fill:none;stroke:var(--signal);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;
+  stroke-dasharray:900;stroke-dashoffset:900;
+  animation:draw 2.2s var(--ease) .4s forwards;
+}
+.hero-graph path.fill{opacity:0;animation:fadeIn 1.2s var(--ease) 1.6s forwards;}
+.hero-graph circle{
+  fill:var(--signal);opacity:0;animation:popIn .5s var(--ease) forwards;
+}
+.hero-graph circle.end{fill:#0d8a4f;}
+@keyframes draw{to{stroke-dashoffset:0;}}
+@keyframes fadeIn{to{opacity:1;}}
+@keyframes popIn{to{opacity:1;}}
+.hero-card-bottom{display:flex;justify-content:space-between;align-items:flex-end;}
+.hero-card-metric .num{font-size:34px;font-weight:800;letter-spacing:-0.03em;color:var(--ink);}
+.hero-card-metric .lab{font-size:12.5px;color:var(--slate);margin-top:2px;}
+.hero-card-people{display:flex;align-items:center;gap:6px;font-family:var(--font-m);font-size:11px;color:var(--slate);}
+
+@media (max-width:860px){
+  .hero{padding:132px 0 72px;}
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .hero-visual{height:320px;order:-1;}
+}
+
+/* ============================================
+   STAT HERO (900%)
+   ============================================ */
+.stat-hero{
+  padding:110px 0;
+  text-align:center;
+  background:var(--mist);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.stat-hero .eyebrow{justify-content:center;}
+.stat-num{
+  font-size:clamp(5.5rem,17vw,10.5rem);
+  font-weight:800;
+  letter-spacing:-0.045em;
+  line-height:.92;
+  color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.stat-num .unit{font-size:.4em;vertical-align:.28em;color:var(--signal);font-weight:700;}
+.stat-hero-label{
+  font-size:clamp(1.15rem,2.2vw,1.5rem);
+  font-weight:600;
+  max-width:640px;margin:14px auto 18px;
+  letter-spacing:-0.01em;
+}
+.stat-hero-micro{
+  font-size:16px;color:var(--slate);max-width:560px;margin:0 auto;line-height:1.65;
+}
+.stat-hero-micro b{color:var(--ink-soft);font-weight:600;}
+
+/* ============================================
+   NUMBERS GRID
+   ============================================ */
+.numbers{padding:120px 0;background:var(--paper);}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;}
+.numbers-grid .card{background:var(--white);padding:34px 26px;transition:background .25s var(--ease);}
+.numbers-grid .card:hover{background:var(--mist);}
+.numbers-grid .card .num{font-size:clamp(2.1rem,3.4vw,2.7rem);font-weight:800;letter-spacing:-0.03em;color:var(--ink);font-variant-numeric:tabular-nums;}
+.numbers-grid .card .num .unit{color:var(--signal);}
+.numbers-grid .card .lab{font-size:14.5px;font-weight:600;color:var(--ink-soft);margin-top:8px;}
+.numbers-grid .card .ctx{font-family:var(--font-m);font-size:11px;color:var(--slate);margin-top:6px;letter-spacing:.02em;}
+
+@media (max-width:860px){.numbers-grid{grid-template-columns:repeat(2,1fr);}.numbers{padding:88px 0;}}
+@media (max-width:520px){.numbers-grid{grid-template-columns:1fr;}}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about{padding:130px 0;background:var(--mist);}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:start;}
+.about-copy h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:22px;}
+.about-copy p{font-size:17.5px;color:var(--ink-soft);line-height:1.75;margin-bottom:18px;}
+.about-facts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:32px;}
+.about-facts .fact{border-top:1px solid var(--line);padding-top:12px;}
+.about-facts .fact .v{font-size:22px;font-weight:700;letter-spacing:-0.02em;}
+.about-facts .fact .k{font-size:13px;color:var(--slate);margin-top:2px;}
+
+.id-card{
+  background:var(--ink);color:var(--white);
+  border-radius:var(--r-lg);
+  padding:38px 34px;
+  position:relative;overflow:hidden;
+}
+.id-card::before{
+  content:'';position:absolute;top:-40%;right:-30%;width:70%;height:70%;
+  background:radial-gradient(circle,rgba(0,113,227,.35),transparent 70%);
+  pointer-events:none;
+}
+.id-card-mark{
+  width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-m);font-weight:700;font-size:20px;letter-spacing:-0.02em;
+  margin-bottom:26px;border:1px solid rgba(255,255,255,.14);
+}
+.id-card h3{font-size:24px;letter-spacing:-0.02em;margin-bottom:4px;}
+.id-card .role{font-size:14.5px;color:rgba(255,255,255,.6);margin-bottom:26px;}
+.id-card-row{
+  display:flex;align-items:center;gap:12px;
+  padding:13px 0;border-top:1px solid rgba(255,255,255,.12);
+  font-size:14px;color:rgba(255,255,255,.85);
+}
+.id-card-row svg{width:16px;height:16px;flex-shrink:0;color:rgba(255,255,255,.5);}
+.id-card-row:last-child{padding-bottom:0;}
+
+@media (max-width:860px){
+  .about{padding:88px 0;}
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .about-facts{grid-template-columns:1fr 1fr;}
+}
+
+/* ============================================
+   EXPERIENCE
+   ============================================ */
+.experience{padding:130px 0;background:var(--paper);}
+.timeline{position:relative;}
+.timeline::before{
+  content:'';position:absolute;left:7px;top:10px;bottom:10px;width:1px;background:var(--line);
+}
+.tl-item{position:relative;padding-left:44px;margin-bottom:64px;}
+.tl-item:last-child{margin-bottom:0;}
+.tl-dot{
+  position:absolute;left:0;top:6px;width:15px;height:15px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--signal);
+}
+.tl-item.current .tl-dot{background:var(--signal);box-shadow:0 0 0 4px rgba(0,113,227,.15);}
+.tl-date{
+  font-family:var(--font-m);font-size:12.5px;font-weight:600;letter-spacing:.04em;
+  color:var(--signal);margin-bottom:10px;text-transform:uppercase;
+}
+.tl-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:18px;}
+.tl-role{font-size:clamp(1.35rem,2.4vw,1.7rem);font-weight:700;letter-spacing:-0.02em;}
+.tl-org{font-size:15px;color:var(--slate);font-weight:500;margin-top:3px;}
+.tl-org b{color:var(--ink-soft);font-weight:600;}
+.tl-list{display:grid;gap:12px;max-width:760px;}
+.tl-list li{
+  position:relative;padding-left:20px;font-size:15.5px;color:var(--ink-soft);line-height:1.6;
+}
+.tl-list li::before{
+  content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--line);
+}
+.tl-list li.highlight{color:var(--ink);font-weight:500;}
+.tl-list li.highlight::before{background:var(--signal);}
+.tl-list li.highlight .hl-num{color:var(--signal);font-weight:700;}
+
+@media (max-width:860px){.experience{padding:88px 0;}.tl-item{margin-bottom:52px;}}
+
+/* ============================================
+   EXPERTISE (dark)
+   ============================================ */
+.expertise{padding:130px 0;background:var(--void);color:var(--white);}
+.expertise .section-head p{color:rgba(255,255,255,.6);}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--void-line);border:1px solid var(--void-line);border-radius:var(--r-lg);overflow:hidden;margin-bottom:44px;}
+.exp-card{background:var(--void-2);padding:32px 28px;}
+.exp-card h3{font-size:16.5px;font-weight:600;margin-bottom:16px;letter-spacing:-0.01em;}
+.exp-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.exp-tags span{
+  font-size:12.5px;color:rgba(255,255,255,.75);
+  border:1px solid var(--void-line);padding:6px 12px;border-radius:var(--r-pill);
+}
+.soft-skills{
+  border-top:1px solid var(--void-line);padding-top:36px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 10px;
+}
+.soft-skills .lab{font-family:var(--font-m);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-right:6px;}
+.soft-skills span:not(.lab){
+  font-size:13px;color:rgba(255,255,255,.8);
+  background:rgba(255,255,255,.06);padding:7px 14px;border-radius:var(--r-pill);
+}
+
+@media (max-width:860px){.expertise{padding:88px 0;}.exp-grid{grid-template-columns:1fr;}}
+@media (min-width:861px) and (max-width:1080px){.exp-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ============================================
+   EDUCATION
+   ============================================ */
+.education{padding:130px 0;background:var(--paper);}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;}
+.edu-col h3{
+  font-family:var(--font-m);font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--slate);margin-bottom:26px;padding-bottom:16px;border-bottom:1px solid var(--line);
+}
+.edu-entry{padding:20px 0;border-bottom:1px solid var(--mist-2);}
+.edu-entry:last-child{border-bottom:none;}
+.edu-entry-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
+.edu-entry .name{font-size:16.5px;font-weight:600;letter-spacing:-0.01em;}
+.edu-entry .yr{font-family:var(--font-m);font-size:12.5px;color:var(--signal);font-weight:600;flex-shrink:0;}
+.edu-entry .org{font-size:14.5px;color:var(--slate);margin-top:4px;}
+.edu-entry .status{
+  display:inline-block;margin-top:8px;font-size:11.5px;font-weight:600;color:#0d8a4f;
+  background:#e6f6ee;padding:3px 10px;border-radius:var(--r-pill);
+}
+
+@media (max-width:860px){.education{padding:88px 0;}.edu-grid{grid-template-columns:1fr;gap:44px;}}
+
+/* ============================================
+   CONTACT
+   ============================================ */
+.contact{
+  padding:140px 0 120px;text-align:center;background:var(--ink);color:var(--white);position:relative;overflow:hidden;
+}
+.contact::before{
+  content:'';position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:900px;height:500px;
+  background:radial-gradient(ellipse,rgba(0,113,227,.28),transparent 65%);pointer-events:none;
+}
+.contact-inner{position:relative;max-width:640px;margin:0 auto;}
+.contact h2{font-size:clamp(2.1rem,4.6vw,3.3rem);letter-spacing:-0.03em;margin-bottom:18px;}
+.contact p{font-size:18px;color:rgba(255,255,255,.65);margin-bottom:42px;line-height:1.6;}
+.contact-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-bottom:52px;}
+.contact-methods{display:flex;flex-wrap:wrap;justify-content:center;gap:28px 40px;}
+.contact-method{display:flex;flex-direction:column;align-items:center;gap:8px;}
+.contact-method svg{width:20px;height:20px;color:rgba(255,255,255,.45);}
+.contact-method .v{font-size:14.5px;font-weight:500;color:rgba(255,255,255,.85);}
+.contact-method .v:hover{color:var(--white);}
+.contact-method .k{font-family:var(--font-m);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer{
+  padding:28px 0;background:var(--ink);border-top:1px solid var(--void-line);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+}
+.footer p{font-size:13px;color:rgba(255,255,255,.42);}
+.footer .fright{font-family:var(--font-m);font-size:11.5px;color:rgba(255,255,255,.32);letter-spacing:.02em;}
+
+@media (max-width:600px){
+  .footer{flex-direction:column;text-align:center;}
+  body{font-size:16px;}
+  .hero-cta,.contact-actions{flex-direction:column;width:100%;}
+  .hero-cta .btn,.contact-actions .btn{width:100%;}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============================================
+     NAV
+     ============================================ -->
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo"><span class="mark">RT</span> Rohan Thakur</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#hero">Overview</a>
+      <a href="#results">Results</a>
+      <a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#contact" class="nav-cta">Let's talk</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <div class="nav-mobile-inner">
+      <a href="#hero">Overview</a>
+      <a href="#results">Results</a>
+      <a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="reveal is-visible">
+        <div class="hero-badge"><span class="dot"></span> Available for new roles · New Delhi, India</div>
+        <h1>Ad spend, engineered into <em>revenue.</em></h1>
+        <p class="hero-sub">I'm Rohan Thakur, a performance marketing manager who builds full-funnel <strong>Google Ads</strong> and <strong>Meta Ads</strong> systems for e-commerce and luxury brands — turning marketing budgets into measurable, compounding growth.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get in touch</a>
+          <a href="#results" class="btn btn-secondary">View the results</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal is-visible">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <span class="hero-card-label">Campaign Performance</span>
+            <span class="hero-card-tag">Live Account</span>
+          </div>
+          <svg class="hero-graph" viewBox="0 0 560 200" preserveAspectRatio="none" aria-hidden="true">
+            <line x1="0" y1="170" x2="560" y2="170" stroke="#e8e8ed" stroke-width="1"/>
+            <line x1="0" y1="115" x2="560" y2="115" stroke="#e8e8ed" stroke-width="1"/>
+            <line x1="0" y1="60" x2="560" y2="60" stroke="#e8e8ed" stroke-width="1"/>
+            <path class="fill" d="M10 168 C 70 158, 100 150, 140 155 C 190 162, 220 130, 270 118 C 320 106, 340 128, 390 90 C 440 55, 470 70, 550 15 L 550 200 L 10 200 Z" fill="url(#g1)"/>
+            <path class="line" d="M10 168 C 70 158, 100 150, 140 155 C 190 162, 220 130, 270 118 C 320 106, 340 128, 390 90 C 440 55, 470 70, 550 15" />
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0071e3" stop-opacity="0.16"/>
+                <stop offset="100%" stop-color="#0071e3" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <circle cx="140" cy="155" r="4" style="animation-delay:1.8s"/>
+            <circle cx="270" cy="118" r="4" style="animation-delay:2s"/>
+            <circle cx="390" cy="90" r="4" style="animation-delay:2.2s"/>
+            <circle class="end" cx="550" cy="15" r="6" style="animation-delay:2.4s"/>
+          </svg>
+          <div class="hero-card-bottom">
+            <div class="hero-card-metric">
+              <div class="num" data-count="900" data-suffix="%">0%</div>
+              <div class="lab">Peak ROAS · Google Ads</div>
+            </div>
+            <div class="hero-card-people">Luxury vertical</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STAT HERO — 900% ROAS
+       ============================================ -->
+  <section class="stat-hero" id="results">
+    <div class="container reveal">
+      <div class="eyebrow">The headline number</div>
+      <div class="stat-num"><span data-count="900" data-suffix="%">0%</span></div>
+      <div class="stat-hero-label">Peak ROAS delivered through Google Ads, in luxury product marketing.</div>
+      <p class="stat-hero-micro">A <b>900% return on ad spend</b> — every ₹1 invested returned ₹9 in tracked revenue — achieved through Google Ads audience targeting, bid strategy, and creative testing alone, for a luxury product line.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       NUMBERS GRID
+       ============================================ -->
+  <section class="numbers">
+    <div class="container">
+      <div class="numbers-grid reveal-stagger reveal">
+        <div class="card">
+          <div class="num"><span data-count="25" data-suffix="%">0%</span><span class="unit">+</span></div>
+          <div class="lab">ROAS growth</div>
+          <div class="ctx">SARBAANI · Q1</div>
+        </div>
+        <div class="card">
+          <div class="num"><span data-count="30" data-suffix="%">0%</span></div>
+          <div class="lab">Online sales growth</div>
+          <div class="ctx">QUARTER-OVER-QUARTER</div>
+        </div>
+        <div class="card">
+          <div class="num"><span data-count="18" data-suffix="%">0%</span></div>
+          <div class="lab">CTR lift</div>
+          <div class="ctx">GOOGLE SEARCH + META</div>
+        </div>
+        <div class="card">
+          <div class="num"><span data-count="40" data-suffix="%">0%</span></div>
+          <div class="lab">Social audience growth</div>
+          <div class="ctx">6 MONTHS</div>
+        </div>
+        <div class="card">
+          <div class="num"><span data-count="35" data-suffix="%">0%</span></div>
+          <div class="lab">CPC reduction</div>
+          <div class="ctx">MONSTABOLIC NUTRITION</div>
+        </div>
+        <div class="card">
+          <div class="num"><span data-count="20" data-suffix="%">0%</span></div>
+          <div class="lab">CTR improvement</div>
+          <div class="ctx">BID + AUDIENCE OPTIMIZATION</div>
+        </div>
+        <div class="card">
+          <div class="num"><span data-count="100" data-suffix="%">0%</span></div>
+          <div class="lab">Attribution visibility</div>
+          <div class="ctx">GA4 + GTM IMPLEMENTATION</div>
+        </div>
+        <div class="card">
+          <div class="num">₹3–5<span class="unit">L</span></div>
+          <div class="lab">Monthly ad budget</div>
+          <div class="ctx">FULL P&amp;L OWNERSHIP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT
+       ============================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <div class="eyebrow">Overview</div>
+          <h2>Two years in-house.<br>Four years in the trenches.</h2>
+          <p>Rohan is a performance marketing manager with 2+ years of in-house experience and over four years of freelance work in high-performance digital marketing. He specializes in Google Ads and Meta Ads management, consistently improving ROAS, CTR, and CPC across e-commerce, luxury, and nutrition brands — including a peak <strong>900% ROAS on Google Ads</strong> within the luxury vertical.</p>
+          <p>His approach covers the full paid media funnel — audience strategy, creative execution, and GA4-driven analytics — built to turn budgets into measurable growth. He currently leads full digital performance strategy for Sarbaani, a luxury D2C perfume brand, based in New Delhi.</p>
+          <div class="about-facts">
+            <div class="fact"><div class="v">2+ Yrs</div><div class="k">In-house experience</div></div>
+            <div class="fact"><div class="v">4+ Yrs</div><div class="k">Freelance expertise</div></div>
+            <div class="fact"><div class="v">3</div><div class="k">Verticals — e-comm, luxury, nutrition</div></div>
+            <div class="fact"><div class="v">2</div><div class="k">Languages — English, Hindi</div></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="id-card">
+            <div class="id-card-mark">RT</div>
+            <h3>Rohan Thakur</h3>
+            <div class="role">Performance Marketing Manager</div>
+            <div class="id-card-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              New Delhi, India
+            </div>
+            <div class="id-card-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 6 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-6-3.8-9s1.3-6.3 3.8-9z"/></svg>
+              English (Professional), Hindi (Native)
+            </div>
+            <div class="id-card-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
+              Google Ads &amp; GA4 Certified
+            </div>
+            <div class="id-card-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              Immediate joiner
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EXPERIENCE
+       ============================================ -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Experience</div>
+        <h2>Where the numbers came from.</h2>
+        <p>Three roles, one throughline — paid media systems that are measured, optimized, and accountable to revenue.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item current reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Mar 2026 — Present</div>
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Performance Marketing Manager</div>
+              <div class="tl-org"><b>Sarbaani</b> — Luxury Perfume Brand · New Delhi</div>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li class="highlight">Hit a peak <span class="hl-num">900% ROAS</span> on Google Ads campaigns within the luxury product line — audience targeting, bid strategy, and creative testing</li>
+            <li>Managed and optimized Meta Ads &amp; Google Ads campaigns for a luxury D2C e-commerce brand, achieving a 25%+ improvement in ROAS within the first quarter</li>
+            <li>Owned monthly advertising budgets of ₹3–5 Lakhs with full P&amp;L accountability</li>
+            <li>Designed and executed full-funnel paid media strategies — awareness to conversion — resulting in a 30% increase in online sales quarter-over-quarter</li>
+            <li>Developed high-converting ad creatives and landing page frameworks that improved CTR by 18% across Google Search and Meta</li>
+            <li>Implemented advanced GA4 and GTM tracking, enabling 100% attribution visibility across all paid and organic touchpoints</li>
+            <li>Led influencer partnerships and content calendar strategy, growing the brand's social audience by 40% in 6 months</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Dec 2025 — Mar 2026</div>
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Digital Marketing Head</div>
+              <div class="tl-org"><b>Monstabolic Nutrition Pvt. Ltd.</b> · New Delhi</div>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Directed end-to-end digital marketing — paid media, organic social, SEO, and brand development</li>
+            <li>Scaled Google Ads and Meta Ads performance, achieving a 20% CTR improvement and 35% reduction in CPC through audience segmentation and bid strategy</li>
+            <li>Built and launched a quarterly content strategy across Instagram, Facebook, and YouTube, increasing organic engagement by 25%</li>
+            <li>Ran competitor analysis across 10+ rival brands, informing a repositioning strategy that improved lead quality</li>
+            <li>Delivered weekly performance dashboards to senior leadership, translating campaign data into business decisions</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Sep 2024 — Nov 2025</div>
+          <div class="tl-header">
+            <div>
+              <div class="tl-role">Digital Marketing Head</div>
+              <div class="tl-org"><b>Online Strikers</b> · Gurugram</div>
+            </div>
+          </div>
+          <ul class="tl-list">
+            <li>Led SEO, PPC, and social media strategy across 5+ client accounts in e-commerce, retail, and services</li>
+            <li>Ran keyword research and on-page/off-page SEO, improving organic rankings by an average of 2–3 positions within 90 days</li>
+            <li>Managed paid campaigns with a combined monthly spend of ₹1–2 Lakhs, optimizing bids and creative to hit client KPIs</li>
+            <li>Produced detailed monthly performance reports on impressions, clicks, conversions, and ROI for all active accounts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EXPERTISE (dark)
+       ============================================ -->
+  <section class="expertise" id="expertise">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow on-dark">Expertise</div>
+        <h2>The full performance stack.</h2>
+        <p>From strategy to execution to reporting — the tools and disciplines behind every campaign.</p>
+      </div>
+
+      <div class="exp-grid reveal-stagger reveal">
+        <div class="exp-card">
+          <h3>Performance Marketing</h3>
+          <div class="exp-tags">
+            <span>Google Ads</span><span>Meta Ads</span><span>Campaign Strategy</span><span>ROAS Optimization</span><span>CPC Reduction</span><span>Bid Management</span><span>Retargeting</span>
+          </div>
+        </div>
+        <div class="exp-card">
+          <h3>Digital Strategy</h3>
+          <div class="exp-tags">
+            <span>Full-Funnel Marketing</span><span>Lead Generation</span><span>Brand Positioning</span><span>Go-To-Market Planning</span><span>Competitor Analysis</span><span>Content Strategy</span>
+          </div>
+        </div>
+        <div class="exp-card">
+          <h3>Analytics &amp; Reporting</h3>
+          <div class="exp-tags">
+            <span>GA4</span><span>Google Tag Manager</span><span>Search Console</span><span>Data Studio</span><span>SEMrush</span><span>Ahrefs</span>
+          </div>
+        </div>
+        <div class="exp-card">
+          <h3>E-Commerce &amp; Web</h3>
+          <div class="exp-tags">
+            <span>Shopify</span><span>WordPress</span><span>Landing Page Optimization</span><span>CRO</span><span>UX Enhancement</span>
+          </div>
+        </div>
+        <div class="exp-card">
+          <h3>Creative &amp; Content</h3>
+          <div class="exp-tags">
+            <span>Ad Copywriting</span><span>Creative Strategy</span><span>A/B Testing</span><span>Video Marketing</span><span>Influencer Collaboration</span><span>Social Media Mgmt</span>
+          </div>
+        </div>
+        <div class="exp-card">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="exp-tags">
+            <span>Excel</span><span>Canva</span><span>Meta Business Suite</span><span>Google Merchant Center</span><span>HubSpot</span><span>Notion</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-skills reveal">
+        <span class="lab">Also brings</span>
+        <span>Stakeholder Management</span><span>Strategic Presentations</span><span>Cross-functional Leadership</span><span>Problem-Solving</span><span>Attention to Detail</span><span>Adaptability</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EDUCATION
+       ============================================ -->
+  <section class="education" id="education">
+    <div class="container">
+      <div class="edu-grid">
+        <div class="edu-col reveal">
+          <h3>Education</h3>
+          <div class="edu-entry">
+            <div class="edu-entry-top"><span class="name">Master's in Digital Marketing</span><span class="yr">2024</span></div>
+            <div class="org">Delhi Institute of Digital Marketing (DIDM), South Ex, New Delhi</div>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-entry-top"><span class="name">B.A. Programme</span><span class="yr">2026</span></div>
+            <div class="org">Delhi University, New Delhi</div>
+            <span class="status">Ongoing</span>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-entry-top"><span class="name">CBSE 12th</span><span class="yr">2022</span></div>
+            <div class="org">Government Co-Ed Senior Secondary School, RK Puram, New Delhi</div>
+          </div>
+        </div>
+        <div class="edu-col reveal">
+          <h3>Certifications &amp; Recognition</h3>
+          <div class="edu-entry">
+            <div class="edu-entry-top"><span class="name">Google Ads Certification</span></div>
+            <div class="org">Google Skillshop</div>
+            <span class="status">Active</span>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-entry-top"><span class="name">Google Analytics Individual Qualification (GAIQ)</span></div>
+            <div class="org">Google Skillshop</div>
+            <span class="status">Active</span>
+          </div>
+          <div class="edu-entry">
+            <div class="edu-entry-top"><span class="name">Best Trainee Award</span></div>
+            <div class="org">Delhi Institute of Digital Marketing (DIDM), New Delhi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+       ============================================ -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="reveal">
+        <h2>Have a campaign that needs scaling?</h2>
+        <p>Open to full-time and freelance performance marketing roles across India.</p>
+        <div class="contact-actions">
+          <a href="mailto:digitalwithrohan@gmail.com" class="btn btn-primary">Email Rohan</a>
+          <a href="tel:+918882673246" class="btn btn-secondary btn-on-dark">Call directly</a>
+        </div>
+        <div class="contact-methods">
+          <a class="contact-method" href="mailto:digitalwithrohan@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span class="v">digitalwithrohan@gmail.com</span>
+            <span class="k">Email</span>
+          </a>
+          <a class="contact-method" href="tel:+918882673246">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L14 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2 6a2 2 0 0 1 2-2z"/></svg>
+            <span class="v">+91 88826 73246</span>
+            <span class="k">Phone</span>
+          </a>
+          <a class="contact-method" href="https://www.linkedin.com/in/digitalrohan" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0zM3.5 8.75h3.87V21H3.5V8.75zM10.06 8.75h3.71v1.68h.05c.52-.98 1.78-2.02 3.66-2.02 3.92 0 4.64 2.58 4.64 5.94V21h-3.87v-5.9c0-1.41-.03-3.22-1.96-3.22-1.97 0-2.27 1.54-2.27 3.12V21h-3.87V8.75z"/></svg>
+            <span class="v">/in/digitalrohan</span>
+            <span class="k">LinkedIn</span>
+          </a>
+          <span class="contact-method">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <span class="v">New Delhi, India</span>
+            <span class="k">Location</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;">
+    <p>© 2026 Rohan Thakur — Performance Marketing Manager</p>
+    <p class="fright">GOOGLE ADS CERTIFIED · GAIQ CERTIFIED</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- Nav scroll state ----
+  var nav = document.getElementById('siteNav');
+  var onScroll = function(){
+    if(window.scrollY > 8){ nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  };
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  // ---- Mobile nav toggle ----
+  var toggle = document.getElementById('navToggle');
+  var mobile = document.getElementById('navMobile');
+  toggle.addEventListener('click', function(){
+    var isOpen = mobile.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobile.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobile.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ---- Reduced motion check ----
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- Scroll reveal ----
+  var revealEls = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !prefersReduced){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -60px 0px' });
+    revealEls.forEach(function(el){ revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ---- Count-up numbers ----
+  var counters = document.querySelectorAll('[data-count]');
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(prefersReduced){ el.textContent = target + suffix; return; }
+    var duration = 1700;
+    var start = null;
+    function step(ts){
+      if(start === null){ start = ts; }
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 4);
+      var value = Math.floor(eased * target);
+      el.textContent = value + suffix;
+      if(progress < 1){ requestAnimationFrame(step); }
+      else { el.textContent = target + suffix; }
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var countObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          animateCount(entry.target);
+          countObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.6 });
+    counters.forEach(function(el){ countObserver.observe(el); });
+  } else {
+    counters.forEach(function(el){
+      var t = parseFloat(el.getAttribute('data-count'));
+      el.textContent = t + (el.getAttribute('data-suffix')||'');
+    });
+  }
+})();
+</script>
+</body>
+</html>
